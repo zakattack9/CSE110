@@ -21,7 +21,6 @@ public class Lab2 {
 
     System.out.println("Input age");
     age = scan.nextInt();
-    scan.nextLine();
 
     System.out.println("Input a number");
     num1 = scan.nextDouble();

@@ -38,9 +38,58 @@ public class notes
 
     */
 
+    /*
+    //Escape Characters
 
-    System.out.println();
+    System.out.println("Hello \nWorld"); /breaks to a new line
+    System.out.println("Hello \"World\""); //adds "
+    System.out.println("Hello \\World"); //adds \
+    System.out.println("Hello \tWorld"); //adds tab
+    
+    */
 
+    
+    /* 
+    //String Methods
+
+    String str = scan.nextLine();
+
+    str.indexOf()
+    str.toUpperCase()
+    str.toLowerCase()
+    str.equals()
+    str.contains()
+    str.startsWith()
+    str.endsWith()
+    str.charAt()
+    str.substring(index) //takes index to the end (can take two parameter)
+
+    //Convert string to different types
+    String str = "9";
+    int num = Integer.parseInt(str);
+    System.out.println(num * 2);
+
+    System.out.println(Double.parseDouble(str));
+    System.out.println(Boolean.parseBoolean(str));
+
+    // int, double, boolean (primitive types)
+    // String, Double, Boolean, Integer (object types)
+
+
+    //Integers
+    System.out.println(Integer.MAX_VALUE);
+    System.out.println(Integer.MAX_VALUE + 1); //overflows and starts at MIN_VALUE
+    System.out.println(Integer.MIN_VALUE);
+    System.out.println(Integer.MIN_VALUE - 1); //underflows and starts at MIN_VALUE
+
+
+    */
+
+
+    /*
+    
+
+    */
 
     scan.close();
 

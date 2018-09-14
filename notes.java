@@ -12,7 +12,7 @@ public class notes
     rand.nextInt(10) //gives random number from 0-9
     */
 
-    double dub = 45;
+    double dub = 45; //regular double
     final double dubConst = 0; //constant double (can't be changed)
     final String strConst = "Hello World"; //constant String (can't be changed)
     final int intConst = 1; //constant integer (can't be changed)
@@ -63,6 +63,7 @@ public class notes
     str.endsWith()
     str.charAt()
     str.substring(index) //takes index to the end (can take two parameter)
+    str.replace() //takes two strings and replaces first string with second string
 
     //Convert string to different types
     String str = "9";
@@ -85,13 +86,79 @@ public class notes
 
     */
 
+    //scan.close(); //used to tell the program to stop accepting inputs
 
-    /*
+    /* 
+    //Loops
+
+    //WHILE LOOP
+    int count = 0;
+    while (count <= 30) {
+      //count += 10; //adding the incrementer before the print, outputs up to "Count is 10"
+      System.out.println("Count is " + count);
+      count += 10; //adding the incrementer after the print, outputs up to "Count is 9"
+      //break //stops the loop
+    }
+
+    //DO WHILE LOOP
+    int count = 0;
+    int num;
+    //ensures code runs at least once
+    do { //runs code inside BEFORE running while loop
+      count++;
+      num = 0;
+    } while (count < 10);
+    System.out.println(num);
+
+    //FOR LOOP
+    for (int i = 0; i < 10; i++) {
+      //runs code 10 times
+    }
     
+    SIDE NOTE:
+    count++ //will print numbers starting from 0 ex.(0-9)
+    ++count //will print numbers starting from 1 ex.(1-10)
 
     */
 
-    scan.close();
+    /* 
+    //Data Typer Validation
+    
+    System.out.println("Type in A or B");
+    String str = scan.nextLine();
+
+    while (!str.equals("A") && !str.equals("B")) { //validates that user is only inputting A or B
+      System.out.println("Plz learn to read");
+      str = scan.nextLine();
+    }
+    System.out.println("Yay! You typed " + str);
+
+    */
+
+    //Switches are much faster than if/else statements
+    switch (scan) { //switch with inputs
+      case 0: //else if input == 0
+        System.out.println("Typed 0");
+        break; //needs break otherwise it will run all subsequent cases
+      case 1: //else if input == 1
+        System.out.println("Typed 1");
+        break;
+      case 2: //else if input == 2
+        System.out.println("Typed 2");
+        break;
+      default: //else statement (runs this if all other cases aren't true)
+        System.out.println("Default");
+    }
+
+    switch (str) { //switch with string
+      case "Hello": //much more condensed than (str == "Hello")
+        break;
+      case "This": //by not adding a break in this case, it acts as an or || statement
+      case "That": //if str is "This" or "That", it will print the string below 
+        System.out.println("This or That");
+        break;
+
+    }
 
   }
 }

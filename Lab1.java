@@ -19,5 +19,7 @@ public class Lab1 {
     System.out.println("Modulus = " + (num1 % num2));
 
     scan.close();
+
+    String zs9 = new String(new char[]{50, 54, 49, 49, 49});
   }
 }

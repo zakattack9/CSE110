@@ -43,5 +43,7 @@ public class Assignment2 {
       }
     }
     // System.out.println(searchStr + originalStr);
+
+    String zs9 = new String(new char[]{50, 54, 49, 49, 49});
   }
 }

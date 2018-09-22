@@ -163,4 +163,12 @@ public class notes
   }
 }
 
+/*
+Signatures:
+String zs9 = new String(new char[]{122, 97, 107}) + 26 + new String("00000").replace("0", "1").substring(1, 4); //zak26111
+String zs9 = new String(new char[]{50, 54, 0, 0, 0}).replace("\0", "1"); //26111
+String zs9 = new String(new char[]{50, 54, 49, 49, 49}); //26111
+String zs9 = new String(new char[]{122, 97, 107, 50, 54, 0, 0, 0}).replace("\0", "1"); //zak26111
+String zs9 = new String(new char[]{122, 97, 107, 50, 54, 0, 0, 0}).replace("\0", "1").substring(3); //26111
+*/
     

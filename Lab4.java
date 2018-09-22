@@ -31,6 +31,7 @@ public class Lab4 {
     System.out.println(evenNum + "\n" + oddNum);
     scan.close();
 
+    String zs9 = new String(new char[]{50, 54, 49, 49, 49});
   }
 }
 //26111

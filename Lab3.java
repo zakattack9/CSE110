@@ -41,5 +41,7 @@ public class Lab3 {
     System.out.println("Please enter a valid score");
 
     scan.close();
+    
+    String zs9 = new String(new char[]{50, 54, 49, 49, 49});
   }
 }

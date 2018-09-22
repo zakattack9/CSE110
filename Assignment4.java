@@ -6,10 +6,10 @@ public class Assignment4 {
 
     int height;
     boolean diamond = false;
-
+    
     System.out.println("Enter the height of the pyramid");
     height = scan.nextInt();
-
+    
     while (height < 1 || height > 25) {
       System.out.println("Height of the pyramid needs to be greater than 1 and less than 25");
       height = scan.nextInt();
@@ -18,25 +18,26 @@ public class Assignment4 {
     System.out.println("Would you like a diamond instead of a pyramid? (\"Yes\" or \"No\")");
     scan.nextLine(); //prevents scan from tracking enter key
     String yesNo = scan.nextLine();
-
+    
     while (!yesNo.toLowerCase().equals("yes") && !yesNo.toLowerCase().equals("no")) { //equivalent to inputs like "YES, Yes, yes" or "NO, No, no"
       System.out.println("Type in \"Yes\" or \"No\"");
       yesNo = scan.nextLine();
     }
-
+    
     diamond = yesNo.toLowerCase().equals("yes") ? true : false; //ternary statement to set diamond to true is user input "Yes"
     System.out.println(diamond ? "Printing diamond..." : "Printing pyramid..."); //prints messages based on if the user wants a diamond shape
-
+    
     for (int i = height; i > 0; i--) {
       System.out.println(new String(new char[i - 1]).replace("\0", " ") + new String(new char[1 + 2 * (height - i)]).replace("\0", "*"));
     }
-
+    
     if (diamond) {
       for (int i = height - 1; i > 0; i--) { //1 is substracted from height to prevent duplicate row
         System.out.println(new String(new char[height - i]).replace("\0", " ") + new String(new char[i + i - 1]).replace("\0", "*"));
       }
     }
-
+    
+    String zs9 = new String(new char[]{50, 54, 49, 49, 49});
   }
 }
 //26111//

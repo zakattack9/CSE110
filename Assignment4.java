@@ -16,7 +16,7 @@ public class Assignment4 {
     }
     
     System.out.println("Would you like a diamond instead of a pyramid? (\"Yes\" or \"No\")");
-    scan.nextLine(); //prevents scan from tracking enter key
+    scan.nextLine(); //prevents scan from scanning enter key input
     String yesNo = scan.nextLine();
     
     while (!yesNo.toLowerCase().equals("yes") && !yesNo.toLowerCase().equals("no")) { //equivalent to inputs like "YES, Yes, yes" or "NO, No, no"
@@ -43,7 +43,7 @@ public class Assignment4 {
 //26111//
 
 /*
-a breakdown of how spaces and stars are calculated and printed out:
+a breakdown of how spaces/stars are calculated and printed out:
 
 CREATING STRINGS WITH SPACES OR STARS:
   new String() //Creates an empty string

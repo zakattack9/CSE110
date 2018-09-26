@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import javax.sound.midi.Soundbank;
+
 import java.util.Random;
 
 public class notes
@@ -160,7 +163,40 @@ public class notes
 
     }
 
+    //Methods
+    printHello();
+
+    String str = scane.nextLine();
+    printSomething(str);
+
+    if (flipCoin(false)) {
+      System.out.println("Heads");
+    }
   }
+
+  //Methods
+  //methods that aren't void must return a value
+  //methods that aren't void can be used in conditional statements or variable assignments
+
+  public static void printHello() {
+    System.out.println("Hello");
+  }
+
+  public static void printSomething(String input) {
+    System.out.println(input);
+  }
+
+  public static int printSomething(int a, int b) {
+    c = a + b;
+    return c;
+  }
+
+  public static boolean flipCoin(boolean coin) {
+    return !coin;
+  }
+
+
+  
 }
 
 /*
@@ -170,5 +206,7 @@ String zs9 = new String(new char[]{50, 54, 0, 0, 0}).replace("\0", "1"); //26111
 String zs9 = new String(new char[]{50, 54, 49, 49, 49}); //26111
 String zs9 = new String(new char[]{122, 97, 107, 50, 54, 0, 0, 0}).replace("\0", "1"); //zak26111
 String zs9 = new String(new char[]{122, 97, 107, 50, 54, 0, 0, 0}).replace("\0", "1").substring(3); //26111
+
+sysout + tab = System.out.println();
 */
     

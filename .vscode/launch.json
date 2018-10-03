@@ -6,6 +6,16 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - Assignment4",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole",
+      "stopOnEntry": false,
+      "mainClass": "Assignment4",
+      "args": ""
+    },
+    {
+      "type": "java",
       "name": "Debug (Launch)",
       "request": "launch",
       "cwd": "${workspaceFolder}",

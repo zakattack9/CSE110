@@ -43,4 +43,13 @@ public class Lab5 {
     double grade = getAverage(midterm1, midterm2);
     System.out.println(name + "'s total grade is: " + grade);
   }
+
+  public static void test(int num1, int num2) {
+    //num1 to the power of num2
+    int power = num1;
+    for (int i = 0; i < num2; power *= num1) {
+      i++;
+    }
+    System.out.println(power);
+  }
 }

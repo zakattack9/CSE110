@@ -139,6 +139,7 @@ public class notes
     */
 
     //Switches are much faster than if/else statements
+    /*
     switch (scan) { //switch with inputs
       case 0: //else if input == 0
         System.out.println("Typed 0");
@@ -162,8 +163,10 @@ public class notes
         break;
 
     }
+    */
 
     //Methods
+    /*
     printHello();
 
     String str = scane.nextLine();
@@ -171,13 +174,25 @@ public class notes
 
     if (flipCoin(false)) {
       System.out.println("Heads");
-    }
+    }*/
+
+    //Classes
+    //Calling Class Attributes
+    House myHouse = new House(); //File needs to be in same package
+    House myOtherHouse = new House("Green", 5000, -1, 4, 2);
+    myOtherHouse.color = "Blue"; //Can change the value because the class is public
+
+    System.out.println(myHouse.color);
+    System.out.println(myOtherHouse.color);
+    //System.out.println(myOtherHouse.numWalls); //will not work because numWalls is private
+    System.out.println(myOtherHouse.getNumWalls()); //works with the addition of a get method inside class allowing read from the public
   }
 
   //Methods
   //methods that aren't void must return a value
   //methods that aren't void can be used in conditional statements or variable assignments
 
+  /*
   public static void printHello() {
     System.out.println("Hello");
   }
@@ -193,9 +208,33 @@ public class notes
 
   public static boolean flipCoin(boolean coin) {
     return !coin;
-  }
+  }*/
 
+  //Classes
+  //Refer to House.java
+  /*
+  public class House { //doing give it a main
 
+    // Define Characteristics or Attributes (Instance Variables)
+    public String color;
+    public double squareFootage;
+    public int numStories;
+    public int numWalls;
+    public int numBedrooms;
+    //Just declare do not initialize
+
+    //Constructor
+    public House() {
+      color = "Red";
+      squareFootage = 7;
+      numStories = 100;
+      numWalls = 300;
+      numBedrooms = 0;
+    }
+
+  }*/
+
+  
   
 }
 

@@ -72,4 +72,6 @@ String zs9 = new String(new char[]{50, 54, 0, 0, 0}).replace("\0", "1"); //26111
 String zs9 = new String(new char[]{50, 54, 49, 49, 49}); //26111
 String zs9 = new String(new char[]{122, 97, 107, 50, 54, 0, 0, 0}).replace("\0", "1"); //zak26111
 String zs9 = new String(new char[]{122, 97, 107, 50, 54, 0, 0, 0}).replace("\0", "1").substring(3); //26111
+
+public static final String zs9 = new String(new char[]{50, 54, 49, 49, 49});
 */

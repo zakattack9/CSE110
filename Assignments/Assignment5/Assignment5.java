@@ -75,7 +75,6 @@ public class Assignment5 {
       }
     }
     System.out.println("Goodbye, thank you for visiting the pet store");
-
   }
   
   private static String printMenu () {
@@ -91,4 +90,6 @@ public class Assignment5 {
     
     return input;
   }
+
+  public static final String zs9 = new String(new char[]{50, 54, 49, 49, 49});
 }

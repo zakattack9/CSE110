@@ -178,14 +178,22 @@ public class notes
 
     //Classes
     //Calling Class Attributes
+    System.out.println(House.forsale); //will return false even if object is not declared as static variables belong to the class not the object
+    
     House myHouse = new House(); //File needs to be in same package
     House myOtherHouse = new House("Green", 5000, -1, 4, 2);
+    House myEmptyHouse = null; //Creating empty objects
     myOtherHouse.color = "Blue"; //Can change the value because the class is public
 
     System.out.println(myHouse.color);
     System.out.println(myOtherHouse.color);
     //System.out.println(myOtherHouse.numWalls); //will not work because numWalls is private
     System.out.println(myOtherHouse.getNumWalls()); //works with the addition of a get method inside class allowing read from the public
+    System.out.println(myHouse); //if no method is attached, toString() will be called automatically
+  
+    //values will be the same because "forsale" is a static variable
+    System.out.println(myHouse.forsale);
+    System.out.println(myOtherHouse.forsale);
   }
 
   //Methods

@@ -1,11 +1,14 @@
 //Classes
 public class House { //doing give it a main
+  //Static (common value for all objects of class)
+  public static boolean forsale = false; //if changed, all objects will be affected by the new value
+  //don't put static instance variables in constructors as they would reset the value every time a new object is made
 
   // Define Characteristics or Attributes (Instance Variables)
-  public String color; //by making this attribute private, you can't change the value of color
+  public Color color; //uses enum to restrict values
   public double squareFootage;
   public int numStories;
-  private int numWalls;
+  private int numWalls; //by making this attribute private, you can't change the value of numWalls
   public int numBedrooms;
   int numBathrooms; //by not including public/private in front it defaults to private
   //Just declare do not initialize
@@ -13,8 +16,8 @@ public class House { //doing give it a main
   //When a variable is private it can only be seen and changed within the class
 
   //Default Constructor
-  public House() {
-    color = "Red";
+  public House () {
+    color = Color.Red; //assigning a value from an enum (limits the type of valid values for a variable)
     squareFootage = 7;
     numStories = 100;
     numWalls = 300;
@@ -22,7 +25,7 @@ public class House { //doing give it a main
   }
 
   //Regular Constructor
-  public House(String c, double sf, int s, int w, int b) {
+  public House (Color c, double sf, int s, int w, int b) { //using Color as a value type
     color = c;
     squareFootage = s;
     numStories = s;
@@ -33,13 +36,22 @@ public class House { //doing give it a main
   //Methods
 
   //Get
-  public int getNumWalls() { //allows public access to read num walls, though it is a private variable
+  public int getNumWalls () { //allows public access to read num walls, though it is a private variable
     return numWalls;
   }
 
   //Set
-  public void setNumWalls(int newWalls) {
+  public void setNumWalls (int newWalls) {
     numWalls = newWalls;
+  }
+
+  //This is called automatically
+  public String toString () {
+    return "The nuumber of walls is " + numWalls;
+  }
+
+  public static void printStuff () {
+    //static methods can only access other static methods and static instance variables
   }
 
 }

@@ -8,6 +8,7 @@ public class House { //doing give it a main
   public Color color; //uses enum to restrict values
   public double squareFootage;
   public int numStories;
+  public String id;
   private int numWalls; //by making this attribute private, you can't change the value of numWalls
   public int numBedrooms;
   int numBathrooms; //by not including public/private in front it defaults to private
@@ -33,6 +34,16 @@ public class House { //doing give it a main
     numBedrooms = b;
   }
 
+  //Copy Constructor (Made specifically for making copies of object)
+  public House (House toCopy) {
+    color = toCopy.color;
+    squareFootage = toCopy.getNumWalls();
+    numStories = toCopy.numStories;
+    numWalls = toCopy.numWalls;
+    numBedrooms = toCopy.numBedrooms;
+  }
+
+
   //Methods
 
   //Get
@@ -54,4 +65,18 @@ public class House { //doing give it a main
     //static methods can only access other static methods and static instance variables
   }
 
+  //Can have multiple methods with same name but it needs to take in different parameter types
+  //Method Overloading
+  public void setId (String newId) {
+    id = newId;
+  }
+
+  public void setId (int newId) {
+    setId("" + newId); //just converts input to proper value
+  }
+
+  public void setId (double newId) {
+    setId((int)newId); //converts to int and invokes the setId method above
+  }
+  //Method Overloading allows handling of multiple variable types
 }

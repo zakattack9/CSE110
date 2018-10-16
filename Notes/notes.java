@@ -125,7 +125,7 @@ public class notes
     */
 
     /* 
-    //Data Typer Validation
+    //Data Type Validation
     
     System.out.println("Type in A or B");
     String str = scan.nextLine();
@@ -194,6 +194,12 @@ public class notes
     //values will be the same because "forsale" is a static variable
     System.out.println(myHouse.forsale);
     System.out.println(myOtherHouse.forsale);
+
+    //Creating a copy using copy constructor
+    House copyHOuse = new House(myHouse);
+
+
+
   }
 
   //Methods
@@ -242,8 +248,6 @@ public class notes
 
   }*/
 
-  
-  
 }
 
 /*

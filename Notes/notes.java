@@ -196,7 +196,7 @@ public class notes
     System.out.println(myOtherHouse.forsale);
 
     //Creating a copy using copy constructor
-    House copyHOuse = new House(myHouse);
+    House copyHouse = new House(myHouse);
 
 
 

@@ -36,13 +36,19 @@ public class House { //doing give it a main
 
   //Copy Constructor (Made specifically for making copies of object)
   public House (House toCopy) {
-    color = toCopy.color;
-    squareFootage = toCopy.getNumWalls();
-    numStories = toCopy.numStories;
-    numWalls = toCopy.numWalls;
-    numBedrooms = toCopy.numBedrooms;
+    this.color = toCopy.color;
+    this.squareFootage = toCopy.getNumWalls();
+    this.numStories = toCopy.numStories;
+    this.numWalls = toCopy.numWalls;
+    this.numBedrooms = toCopy.numBedrooms;
+  }
+  
+  //Creating copy using this
+  public House (Color color) {
+    this(color, 1, 0, 0, 0); //this() indicates default constructor, when adding parameters it calls the regular constructor
   }
 
+  
 
   //Methods
 

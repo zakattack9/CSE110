@@ -198,6 +198,80 @@ public class notes
     //Creating a copy using copy constructor
     House copyHouse = new House(myHouse);
 
+    //Arrays
+    int[] arr = new int[5]; //initializes empty array that can hold 5 values
+    arr[0] = 5;
+    System.out.println(arr[0]); //5
+
+    int[] arr2 = {1, 2, 3, 4, 5}; //initializes array with values
+    System.out.println(arr2[0]); //1
+
+    for (int i = 0; i < arr2.length; i++) {
+      System.out.println(arr2[i]); //prints out all values of array in order
+    }
+
+    //expanding an array
+    int[] arrCopy = new int[6]; //create a copy of the array
+
+    for (int i = 0; i < arr2.length; i++) { //loop the original array
+      arrCopy[i] = arr2[i]; //assign old values of array to the copy array
+    }
+
+    arr2 = arrCopy; //reassign copy to arr2
+
+    //removing two elements from array and making it size 4
+    int[] copy = new int[arr.length - 2];
+
+    for (int i = 0; i < copy.length; i++) {
+      copy[i] = arr[i + (arr.length - copy.length)];
+    }
+
+    arr = copy;
+
+    //removing value at an index provided by the user
+    copy = new int[arr.length - 1];
+    int indexToRemove = scan.nextInt();
+    
+    while (indexToRemove < 0 || indexToRemove > arr.length - 1) {
+      indexToRemove = scan.nextInt();
+    }
+
+    int shift = 0;
+    for (int i = 0; i < copy.length; i++) {
+      if (i == indexToRemove) {
+        shift++;
+      }
+      copy[i] = arr[i + shift];
+    }
+
+    arr = copy;
+
+    //add an element at a specified index
+    copy = new int[arr.length + 1];
+    System.out.println("Element to add");
+    int element = scan.nextInt();
+    System.out.println("Index to add at");
+    indexToRemove = scan.nextInt();
+
+    while (indexToRemove < 0 || indexToRemove > arr.length) {
+      indexToRemove = scan.nextInt();
+    }
+
+    shift = 0;
+    for (int i = 0; i < arr.length; i++) {
+      if (i == indexToRemove) {
+        copy[i] = element;
+        shift = 1;
+      }
+      copy[i + 1] = arr[i];
+    }
+
+    arr = copy;
+
+
+    int[] arr3 = {5, 3, 4, 3, 1};
+    linearSearch(arr3, 4); //calls linearSearch method and returns index of passed in number
+
 
 
   }
@@ -247,6 +321,37 @@ public class notes
     }
 
   }*/
+
+  // Running Time — Big-Oh O(n) linear time
+  public static int linearSearch (int[] arr, int key) { //finding index of value in array
+    int index = -1;
+
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == key) {
+        index = i;
+        break;
+      }
+    }
+
+    return index;
+  }
+
+  // Running Time - O(n^2)
+  public static void bubbleSort (int[] arr) { //most simple sort alogrithm
+    //the number of times we need to run through the array
+    for (int i = 0; i < arr.length; i++) {
+      //actually running through the array itself and comparing each element
+      for (int j = 0; j < arr.length - i - 1; j++) { //(arr.length - i - 1) prevents checking the last elements in array (makes it faster)
+        //comparing each element to the next one
+        if (arr[j] > arr[j + 1]) {
+          //swap the two elements
+          int temp = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = temp;
+        }
+      }
+    }
+  }
 
 }
 
